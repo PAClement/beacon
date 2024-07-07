@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>BEACON</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="title">BEACON</h1>
+    <p class="text">↓ Bonjour ici retrouvez toutes mes créations ↓</p>
+    <div id="link" class="link"></div>
+</div>
+<script>
+    const sites = [
+        {
+            name: "Portfolio",
+            link: "https://portfolio.clementpaquentin.me"
+        },
+        {
+            name: "Kaleidos",
+            link: "https://kaleidos.clementpaquentin.me"
+        },
+        {
+            name: "Wordus",
+            link: "https://wordus.clementpaquentin.me"
+        }
+    ];
+
+    let snippet = '';
+    sites.forEach(target => {
+        snippet += `<a class="link-button" href="${target.link}" target="_blank">${target.name}</a>`
+    })
+
+    document.querySelector('#link').innerHTML = snippet;
+</script>
+</body>
+</html>
